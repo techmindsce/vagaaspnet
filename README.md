@@ -37,7 +37,7 @@ Ah! Há também a possibilidade de trabalhamos sob demanda.
 # Ok, gostei! O que faço pra vaga ser minha?
 Se você topou o desafio e quer trabalhar conosco, você precisa mostrar seu valor, **"show-me the code"!**
 
-1. Implemente o seguinte **desafio**:
+01. Implemente o seguinte **desafio**:
   
 Uma empresa de medicamentos precisa melhorar a eficiência do setor de vendas, que ainda utiliza-se de agenda telefônica física (de papel) para manter todos os contatos dos clientes. A empresa solicitou que uma aplicação web fosse criada e priorizou a criação de um módulo de cadastro de clientes.
 Dessa forma, qualquer vendedor da equipe de vendas poderá:
@@ -52,12 +52,12 @@ Restrições tecnológicas:
 
 As seguintes tecnologias devem ser utilizadas (tecnologias em negrito são obrigatórias): 
 * **Asp.Net MVC** (IIS)
-* **Use um template Bootstrap**  ([Exemplo](http://startbootstrap.com/template-overviews/sb-admin-2/)))
+* **Use um template Bootstrap**  ([Exemplo](http://startbootstrap.com/template-overviews/sb-admin-2/))
 * Persistência de dados com **Entity Framework**, usando o banco de dados (sql server ou mysql)
 * outras tecnologias/frameworks podem ser utilizadas (se achar útil)
 * **Arquitetura é sua**, sinta-se livre para definir a sua própria solução de arquitetura
 
-2. Crie um **merge request** para a sua solução implementada;
+02. Crie um **merge request** para a sua solução implementada;
 
 #Como será o processo de avaliação?
 
