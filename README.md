@@ -48,8 +48,12 @@ Dessa forma, qualquer vendedor da equipe de vendas poderá:
 
 Restrições tecnológicas: 
 
-As seguintes tecnologias são de uso obrigatório: Asp.Net MVC, IIS, Bootstrap, persistência de dados com Entity Framework, banco de dados (sql server ou mysql), outras tecnologias/frameworks podem ser utilizadas;
-Arquitetura - sinta-se livre para definir a sua própria solução de arquitetura;
+As seguintes tecnologias devem ser utilizadas (tecnologias em negrito são obrigatórias): 
+* **Asp.Net MVC** (IIS)
+* **Use um template Bootstrap**
+* Persistência de dados com **Entity Framework**, usando o banco de dados (sql server ou mysql)
+* outras tecnologias/frameworks podem ser utilizadas (se achar útil)
+* **Arquitetura é sua**, sinta-se livre para definir a sua própria solução de arquitetura
 
 2. Crie um **merge request** para a sua solução implementada;
 
@@ -63,4 +67,4 @@ Os pontos que iremos valorizar, serão:
 
 Estamos ansiosos para ver o seu talento e esperamos ajudá-lo no desenvolvimento das suas habilidades no futuro...
 
-Let's go!! Be happy!
+Let's go!! **Be happy!**
