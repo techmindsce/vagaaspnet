@@ -33,23 +33,32 @@ TDD/BDD;
 Ser participante ativo em grupos ou comunidades de TI.
 
 # ok, gostei! O que faço pra vaga ser minha?
-Se você topou o desafio e quer trabalhar com a techmindsce, você precisa mostrar seu valor, "show-me the code"!
-1. Implemente o seguinte desafio:
-  Uma empresa precisa de um cadastro de clientes. Dessa forma, deverá ser possível para o gestor da empresa:
-  1.1 Consultar a lista de clientes com paginação e ordenação e busca por Nome, Telefone e Endereço;
-  1.2 Cadastrar um novo cliente (com informações básicas de nome, email, data de nascimento, telefone, endereço);
-  1.3 Poder editar informações básicas do cliente;
-Restrições tecnológicas: As seguintes tecnologias são de uso obrigatório: Asp.Net MVC, Bootstrap, persistência de dados com Entity Framework, outras tecnologias podem ser utilizadas;
+Se você topou o desafio e quer trabalhar com a techmindsce, você precisa mostrar seu valor, **"show-me the code"!**
+
+1. Implemente o seguinte **desafio**:
+  
+Uma empresa precisa de um cadastro de clientes. Dessa forma, deverá ser possível para o gestor da empresa:
+
+* Consultar a lista de clientes com paginação e ordenação e busca por Nome, Telefone e Endereço;
+
+* Cadastrar um novo cliente (com informações básicas de nome, email, data de nascimento, telefone, endereço);
+
+* Poder editar informações básicas do cliente;
+
+Restrições tecnológicas: 
+
+As seguintes tecnologias são de uso obrigatório: Asp.Net MVC, Bootstrap, persistência de dados com Entity Framework, outras tecnologias podem ser utilizadas;
 Arquitetura - sinta-se livre para definir a sua própria solução de arquitetura;
 
-2. Crie um merge request para a sua solução implementada;
+2. Crie um **merge request** para a sua solução implementada;
 
-# Como será o processo de avaliaçao?
+#Como será o processo de avaliaçao?
+
 Sinta-se livre e divirta-se na implementação, sabemos que o prazo de implementação deste exemplo é curto, mas queremos ver sua forma de trabalhar. Assim, mostre-nos seu código para que possamos tratá-lo de forma adequada as suas habilidades. 
+
 Os pontos que iremos valorizar, serão:
 - Completude da solução (camada web implementada, persistência em banco de dados etc)
-- QUalidade da solução (iremos verificar o que você teve atenção e capricho para implementar: como por exemplo validações, regras de negócio, layouts bem definidos, uso de testes)
-- 
+- Qualidade da solução (iremos verificar o que você teve atenção e capricho para implementar: como por exemplo validações, regras de negócio, layouts bem definidos, uso de testes)
 
 Estamos ansiosos para ver o seu talento e esperamos ajudá-lo no desenvolvimento das suas habilidades no futuro...
 
