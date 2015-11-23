@@ -59,7 +59,7 @@ As seguintes tecnologias devem ser utilizadas (tecnologias em negrito são obrig
 
 2. Crie um **merge request** para a sua solução implementada;
 
-#Como será o processo de avaliaçao?
+#Como será o processo de avaliação?
 
 Sinta-se livre e divirta-se na implementação, sabemos que o prazo de implementação deste exemplo é curto, mas queremos ver sua forma de trabalhar. Assim, mostre-nos seu código para que possamos tratá-lo de forma adequada as suas habilidades. 
 
