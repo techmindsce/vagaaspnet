@@ -44,7 +44,7 @@ Dessa forma, qualquer vendedor da equipe de vendas poderá:
 
 * Consultar a lista de clientes com paginação e ordenação e busca por Nome, Telefone e Endereço;
 
-* Cadastrar um novo cliente (com informações básicas de nome, email, data de nascimento, telefone, endereço);
+* Cadastrar um novo cliente (com informações básicas de nome, email, data de nascimento, telefone, endereço, etc.);
 
 * Poder editar informações básicas do cliente;
 
