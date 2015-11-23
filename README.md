@@ -50,7 +50,7 @@ Restrições tecnológicas:
 
 As seguintes tecnologias devem ser utilizadas (tecnologias em negrito são obrigatórias): 
 * **Asp.Net MVC** (IIS)
-* **Use um template Bootstrap**
+* **Use um template Bootstrap**  ([Exemplo](http://startbootstrap.com/template-overviews/sb-admin-2/)))
 * Persistência de dados com **Entity Framework**, usando o banco de dados (sql server ou mysql)
 * outras tecnologias/frameworks podem ser utilizadas (se achar útil)
 * **Arquitetura é sua**, sinta-se livre para definir a sua própria solução de arquitetura
