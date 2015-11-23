@@ -66,7 +66,7 @@ Sinta-se livre e divirta-se na implementação, sabemos que o prazo de implement
 Os pontos que iremos valorizar, serão:
 - Completude da solução (camada web implementada, persistência em banco de dados etc)
 - Qualidade da solução (iremos verificar o que você teve atenção e capricho para implementar: como por exemplo validações, regras de negócio, layouts bem definidos, uso de testes)
-
+ 
 O prazo para recebimento é até as 08h da MANHÃ de quinta-feira (26/11).
 
 Estamos ansiosos para ver o seu talento e esperamos ajudá-lo no desenvolvimento das suas habilidades no futuro...
