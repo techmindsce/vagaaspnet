@@ -37,7 +37,8 @@ Se você topou o desafio e quer trabalhar com a techmindsce, você precisa mostr
 
 1. Implemente o seguinte **desafio**:
   
-Uma empresa precisa de um cadastro de clientes. Dessa forma, deverá ser possível para o gestor da empresa:
+Uma empresa de medicamentos precisa melhorar a eficiência do setor de vendas, que ainda utiliza-se de agenda telefônica física (de papel) para manter todos os contatos dos clientes. A empresa solicitou que uma aplicação web fosse criada e priorizou a criação de um módulo de cadastro de clientes.
+Dessa forma, qualquer vendedor da equipe de vendas poderá:
 
 * Consultar a lista de clientes com paginação e ordenação e busca por Nome, Telefone e Endereço;
 
@@ -47,7 +48,7 @@ Uma empresa precisa de um cadastro de clientes. Dessa forma, deverá ser possív
 
 Restrições tecnológicas: 
 
-As seguintes tecnologias são de uso obrigatório: Asp.Net MVC, Bootstrap, persistência de dados com Entity Framework, outras tecnologias podem ser utilizadas;
+As seguintes tecnologias são de uso obrigatório: Asp.Net MVC, IIS, Bootstrap, persistência de dados com Entity Framework, banco de dados (sql server ou mysql), outras tecnologias/frameworks podem ser utilizadas;
 Arquitetura - sinta-se livre para definir a sua própria solução de arquitetura;
 
 2. Crie um **merge request** para a sua solução implementada;
