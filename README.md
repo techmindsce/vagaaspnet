@@ -35,7 +35,7 @@ Ah! Há também a possibilidade de trabalhamos sob demanda.
 
 
 # Ok, gostei! O que faço pra vaga ser minha?
-Se você topou o desafio e quer trabalhar com a techmindsce, você precisa mostrar seu valor, **"show-me the code"!**
+Se você topou o desafio e quer trabalhar conosco, você precisa mostrar seu valor, **"show-me the code"!**
 
 1. Implemente o seguinte **desafio**:
   
