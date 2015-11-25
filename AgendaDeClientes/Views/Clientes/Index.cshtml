@@ -1,0 +1,110 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AgendaDeClientes.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAgendaOnline.cshtml";
+}
+
+<section class="category-wrapper">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-1 col-sm-1">
+            </div>
+            <div class="col-md-10 col-sm-10">
+
+                @using (Html.BeginForm("Index", "Clientes", FormMethod.Get))
+                {
+                    <div class="category-header no-margin-bottom">
+                        <div class="row">
+                            <div class="col-md-2  cat-search-input">
+                                
+                            </div>
+                            
+                            <div class="col-md-7  cat-search-input">
+                               Pesquisar (Nome, Telefone ou Endereço): @Html.TextBox("searchString")
+                            </div>
+
+                            <div class="col-md-3  cat-search-input">
+                                <button class="btn btn-block btn-custom" type="submit">Listar</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="search-results-box">
+                    <div class="row">
+                        <div class="col-md-12 search-results">
+                            Ultimos lançamentos de cadastros de clientes(tente filtrar para ter um resultado mais detalhado ;) )
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-11">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-left">Ultimos Lançamentos</h4>
+                        </div>
+                        <div class="panel-body">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.ActionLink("Nome", "Index", new { sortOrder = ViewBag.NomeParam })
+                                        </th>
+                                        <th>
+                                            Email
+                                        </th>
+                                        <th>
+                                            @Html.ActionLink("Data de Nascimento", "Index", new { sortOrder = ViewBag.Dateparam })
+                                        </th>
+                                        <th>
+                                            Telefone
+                                        </th>
+                                        <th>
+                                            Endereço
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nome)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Email)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DataNascimento)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Telefone)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Endereco)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Editar", "Edit", new { id = item.ClienteID }, htmlAttributes: new { @class = "label label-success" })<!-- |
+                                                @Html.ActionLink("Detalhes", "Details", new { id = item.ClienteID }, htmlAttributes: new { @class = "label label-warning" }) |
+                                                @Html.ActionLink("Deletar", "Delete", new { id = item.ClienteID }, htmlAttributes: new { @class = "label label-danger" })-->
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                              </table>
+                            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+                            @Html.ActionLink("Novo Cliente", "Create", new { }, htmlAttributes: new { @class = "label label-success" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+</section>
