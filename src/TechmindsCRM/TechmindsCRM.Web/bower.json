@@ -1,0 +1,24 @@
+{
+  "name": "Techminds CRM",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "knockout": "~3.3.0",
+    "bootstrap": "~3.3.5",
+    "Durandal": "durandal#~2.1.0",
+    "toastr": "~2.1.2",
+    "font-awesome": "~4.4.0",
+    "adminlte": "~2.3.0"
+  },
+  "resolutions": {
+    "jquery": ">= 1.9.1"
+
+  }
+}

@@ -1,0 +1,76 @@
+.clickable {
+  cursor: pointer !important;
+}
+label >span.help-hint {
+  margin-top: -3px;
+  margin-left: 5px;
+  cursor: pointer !important;
+}
+.content {
+  position: relative;
+  left: 15px;
+  padding: 1px !important;
+  padding-right: 25px !important;
+  margin: 0 auto;
+}
+.tech-logo {
+  background-color: #fbfbfb !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+  color: #444 !important;
+}
+.sidebar-menu > li.active {
+  border-left: 3px solid;
+}
+.loading {
+  display: inline;
+  font-size: 2.4rem;
+  color: #8d8d8d;
+}
+.content-header h1 {
+  display: inline;
+}
+.skin-color {
+  color: #3c8dbc;
+}
+.splash {
+  text-align: center;
+  margin: 10% 0 0 0;
+}
+.splash .message {
+  font-size: 5em;
+  line-height: 1.5em;
+  -webkit-text-shadow: rgba(0,0,0,0.5) 0 0 15px;
+  -moz-text-shadow: rgba(0,0,0,0.5) 0 0 15px;
+  text-shadow: rgba(0,0,0,0.5) 0 0 15px;
+  text-transform: uppercase;
+}
+.splash .fa-spinner {
+  text-align: center;
+  display: inline-block;
+  font-size: 5em;
+  margin-top: 50px;
+}
+.with_out-border {
+  border: none !important;
+}
+.toast {
+  width: 70% !important;
+}
+.modal-footer button.btn.btn-default.btn-primary {
+  color: #fff !important;
+  background-color: #00a65a !important;
+  border-color: #00a65a !important;
+}
+page-control .pagination {
+  margin: 0 !important;
+}
+page-control.left >div {
+  float: left;
+}
+page-control.right >div {
+  float: right;
+}
+.filtro {
+  margin-top: 10px !important;
+  margin-bottom: -20px !important;
+}

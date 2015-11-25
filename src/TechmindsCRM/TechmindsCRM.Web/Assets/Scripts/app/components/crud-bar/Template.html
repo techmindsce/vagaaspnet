@@ -1,0 +1,18 @@
+﻿<div classs="btn-group">
+    <!--ko if: newActionVisible-->
+    <button class="btn btn-success" data-bind="click: $data.new, enable: newActionEnabled">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Novo
+    </button>
+    <!--/ko-->
+    <!--ko if: editActionVisible-->
+    <button class="btn btn-default" data-bind="click: edit, enable: editActionEnable">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Editar
+    </button>
+    <!--/ko-->
+    <!--ko if: deleteActionVisible-->
+    <button class="btn btn-danger" type="button" data-bind="click: $data.delete, enable: deleteActionEnable">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
+        <span class="badge" data-bind="visible:selectedCountBadge, text: selectedCountBadge"></span>
+    </button>
+    <!--/ko-->
+</div>

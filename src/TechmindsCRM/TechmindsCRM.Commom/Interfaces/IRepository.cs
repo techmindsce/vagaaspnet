@@ -22,5 +22,7 @@ namespace TechmindsCRM.Commom.Interfaces
         void Delete(long id);
 
         void Delete(TEntity entidade);
+
+        void DeleteRange(params long[] ids);
     }
 }

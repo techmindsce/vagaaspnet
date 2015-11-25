@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using TechmindsCRM.Commom.Interfaces;
 
 namespace TechmindsCRM.Data
@@ -45,6 +46,7 @@ namespace TechmindsCRM.Data
         {
             if (!rolledback)
                 Commit();
+            GC.SuppressFinalize(this);
         }
     }
 }

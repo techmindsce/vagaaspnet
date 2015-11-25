@@ -1,0 +1,35 @@
+﻿
+<crud-bar params="{crudBarAPI: crudBarAPI, onNew: onNew, onDelete: onDelete.bind($data), withEditAction: false}"></crud-bar>
+
+<div class="box filtro">
+    <div class="box-header with-border clickable" data-widget="collapse">
+        <span class="fa fa-minus"></span>
+        <h2 class="box-title">Filtro</h2>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="form-group col-sm-3">
+                <label for="nome">Nome Cliente</label>
+                <input type="text" class="form-control" id="nome" data-bind="value:nome">
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="cpfcnpj">CPF/CNPJ <span data-toggle="tooltip" title="" class="badge bg-info help-hint" data-original-title="Digite somente números.">?</span></label>
+                <input type="text" class="form-control" id="cpfcnpj" data-bind="textInput:cpfcnpj.formatted">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="btn-group">
+                    <button class="btn btn-flat btn-default" data-bind="click: filtrar">
+                        <span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Filtrar
+                    </button>
+                    <button class="btn btn-flat btn-default" data-bind="click: limparFiltro">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Limpar Filtro
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<grid params="{name:'Teste',url:gridUrl, collumns: collumns, defaultAction: defaultAction.bind($data), gridAPI:gridAPI}"></grid>

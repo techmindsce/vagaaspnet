@@ -1,0 +1,92 @@
+﻿
+<form data-bind="with: model">
+    <div class="row">
+        <div class="col-xs-5">
+            <fieldset class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" class="form-control" data-bind="value:nome" />
+            </fieldset>
+        </div>
+        <div class="col-xs-3">
+            <fieldset class="form-group">
+                <label for="cpfcnpj">CPF/CNPJ <span data-toggle="tooltip" title="" class="badge bg-info help-hint" data-original-title="Digite somente números.">?</span></label>
+                <input type="text" id="cpfcnpj" class="form-control" data-bind="textInput: cpfcnpj.formatted" placeholder="CPF/CNPJ" />
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5">
+            <fieldset class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-control" data-bind="value:email" />
+            </fieldset>
+        </div>
+        <div class="col-xs-3">
+            <fieldset class="form-group">
+                <label for="tel">Telefone</label>
+                <input type="text" id="tel" class="form-control" data-bind="value:telefones" />
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <fieldset class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" class="form-control" data-bind="value:cep" />
+            </fieldset>
+        </div>
+        <div class="col-xs-6">
+            <fieldset class="form-group">
+                <label for="logra">Logradouro</label>
+                <input type="text" id="logra" class="form-control" data-bind="value:logradouro" />
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3">
+            <fieldset class="form-group">
+                <label for="comp">Complemento</label>
+                <input type="text" id="comp" class="form-control" data-bind="value:complemento" />
+            </fieldset>
+        </div>
+        <div class="col-xs-1">
+            <fieldset class="form-group">
+                <label for="num">Número</label>
+                <input type="text" id="num" class="form-control" data-bind="value:numero" />
+            </fieldset>
+        </div>
+        <div class="col-xs-4">
+            <fieldset class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" class="form-control" data-bind="value:bairro" />
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3">
+            <fieldset class="form-group">
+                <label for="mun">Município</label>
+                <input type="text" id="mun" class="form-control" data-bind="value:municipio" />
+            </fieldset>
+        </div>
+        <div class="col-sm-1">
+            <fieldset class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" id="uf" class="form-control" data-bind="value:uf" />
+            </fieldset>
+        </div>
+    </div>
+
+    <div classs="btn-group">
+        <button class="btn btn-success" data-bind="click: $parent.save.bind($parent)">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Salvar
+        </button>
+        <button class="btn btn-danger" type="button" data-bind="click: $parent.cancel.bind($parent)">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar
+        </button>
+    </div>
+</form>

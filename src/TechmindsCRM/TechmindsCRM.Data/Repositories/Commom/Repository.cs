@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using TechmindsCRM.Commom.Abstract;
+using TechmindsCRM.Commom.Extensions;
 using TechmindsCRM.Commom.Interfaces;
 
 namespace TechmindsCRM.Data.Repositories.Commom
@@ -24,11 +25,9 @@ namespace TechmindsCRM.Data.Repositories.Commom
         public TEntity Find(long id) => todosItens.Find(id);
 
         public IQueryable<TEntity> Filter(string q)
-        {
-            return todosItens;
-        }
+            => string.IsNullOrWhiteSpace(q) ? List() : List().Where(q);
 
-        public IQueryable<TEntity> Filter(Expression<Func<TEntity, bool>> predicate) => todosItens.Where(predicate);
+        public IQueryable<TEntity> Filter(Expression<Func<TEntity, bool>> predicate) => List().Where(predicate);
 
         public TEntity Include(TEntity entidade)
         {
@@ -40,11 +39,22 @@ namespace TechmindsCRM.Data.Repositories.Commom
         public TEntity Update(TEntity entidade)
         {
             todosItens.AddOrUpdate(entidade);
+            _uow.Save();
             return entidade;
         }
 
         public void Delete(long id) => Delete(todosItens.Find(id));
 
-        public void Delete(TEntity entidade) => todosItens.Remove(entidade);
+        public void DeleteRange(params long[] ids)
+        {
+            todosItens.RemoveRange(List().Where(e => ids.Contains(e.Id)));
+            _uow.Save();
+        }
+
+        public void Delete(TEntity entidade)
+        {
+            todosItens.Remove(entidade);
+            _uow.Save();
+        }
     }
 }

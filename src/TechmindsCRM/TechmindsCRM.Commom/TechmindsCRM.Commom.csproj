@@ -50,8 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\Entidade.cs" />
+    <Compile Include="Exceptions\CampoObrigatorioException.cs" />
+    <Compile Include="Exceptions\CpfCnpjInvalidoException.cs" />
+    <Compile Include="Exceptions\CRMException.cs" />
+    <Compile Include="Extensions\IQueryableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ExpressionFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

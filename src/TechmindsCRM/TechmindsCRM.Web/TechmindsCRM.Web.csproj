@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,11 +44,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -58,6 +83,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -65,6 +94,14 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -81,9 +118,6 @@
     </Reference>
     <Reference Include="System.Web.Helpers">
       <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -102,20 +136,127 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\main.js" />
+    <Content Include="App\models\Cliente.js" />
+    <Content Include="App\services\error-handler.js" />
+    <Content Include="App\services\toastService.js" />
+    <Content Include="App\viewmodels\cliente\dados.js" />
+    <Content Include="App\viewmodels\cliente\index.js" />
+    <Content Include="App\viewmodels\home\home.js" />
+    <Content Include="App\viewmodels\home\shell.js" />
+    <Content Include="Assets\Scripts\app.bundled.js" />
+    <Content Include="Assets\Scripts\app\all.js" />
+    <Content Include="Assets\Scripts\app\components\crud-bar\Register.js" />
+    <Content Include="Assets\Scripts\app\components\crud-bar\Template.html" />
+    <Content Include="Assets\Scripts\app\components\crud-bar\ViewModel.js" />
+    <Content Include="Assets\Scripts\app\components\grid\Register.js" />
+    <Content Include="Assets\Scripts\app\components\grid\Template.html" />
+    <Content Include="Assets\Scripts\app\components\grid\ViewModel.js" />
+    <Content Include="Assets\Scripts\app\components\page-control\Register.js" />
+    <Content Include="Assets\Scripts\app\components\page-control\Template.html" />
+    <Content Include="Assets\Scripts\app\components\page-control\ViewModel.js" />
+    <Content Include="Assets\Scripts\app\components\register-all.js" />
+    <Content Include="Assets\Scripts\app\extensions\cpfcnpjExtender.js" />
+    <Content Include="Assets\Scripts\app\extensions\doubleClickBindHandler.js" />
+    <Content Include="Assets\Scripts\app\extensions\formatterBindHandler.js" />
+    <Content Include="Assets\Scripts\app\models\ajax-request.js" />
+    <Content Include="Assets\Scripts\app\models\api\ApiCrudBarBuilder.js" />
+    <Content Include="Assets\Scripts\app\models\api\ApiGridBuilder.js" />
+    <Content Include="Assets\Scripts\app\models\gridDataSource.js" />
+    <Content Include="Assets\Scripts\app\models\gridRequest.js" />
+    <Content Include="Assets\Scripts\vendor\app.min.js" />
+    <Content Include="Assets\Scripts\vendor\bootstrap.min.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\activator.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\app.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\binder.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\composition.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\events.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\dialog.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\history.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\http.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\observable.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\router.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\serializer.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\plugins\widget.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\system.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\transitions\entrance.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\viewEngine.js" />
+    <Content Include="Assets\Scripts\vendor\durandal\viewLocator.js" />
+    <Content Include="Assets\Scripts\vendor\jquery.min.js" />
+    <Content Include="Assets\Scripts\vendor\jquery.slimscroll.min.js" />
+    <Content Include="Assets\Scripts\vendor\knockout.js" />
+    <Content Include="Assets\Scripts\vendor\require.js" />
+    <Content Include="Assets\Scripts\vendor\text.js" />
+    <Content Include="Assets\Scripts\vendor\toastr.min.js" />
+    <Content Include="Assets\Style\app.css" />
+    <Content Include="Assets\Style\app\_color.styl" />
+    <None Include="Assets\Style\app\app.styl" />
+    <Content Include="Assets\Style\app\techminds-crm.css" />
+    <Content Include="Assets\Style\vendor\css\AdminLTE.min.css" />
+    <Content Include="Assets\Style\vendor\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\Style\vendor\css\bootstrap.min.css" />
+    <Content Include="Assets\Style\vendor\css\durandal.css" />
+    <Content Include="Assets\Style\vendor\css\font-awesome.min.css" />
+    <Content Include="Assets\Style\vendor\css\toastr.min.css" />
+    <Content Include="Assets\Style\vendor\css\_all-skins.min.css" />
+    <Content Include="Assets\Style\vendor\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\Style\vendor\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="gulpfile.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\MapasConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\api\ClienteController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mapas\ClienteProfile.cs" />
+    <Compile Include="OutputModel\ErrorMessage.cs" />
+    <Compile Include="OutputModel\ErrorResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ClienteFiltro.cs" />
+    <Compile Include="ViewModels\ClienteViewModel.cs" />
+    <Compile Include="ViewModels\GridRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Dados.cshtml" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="Assets\Style\vendor\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\Style\vendor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Style\vendor\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\Style\vendor\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\Style\vendor\fonts\FontAwesome.otf" />
+    <Content Include="Assets\Style\vendor\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\Style\vendor\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\Style\vendor\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\Style\vendor\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\_splash.cshtml" />
+    <Content Include="Views\Home\Shell.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Assets\Style\app\layout\_layout.styl" />
+    <Content Include="Assets\Style\app\components\all.styl" />
+    <Content Include="Assets\Style\app\components\_grid.styl" />
+    <Content Include="Assets\Style\app\components\_page-control.styl" />
+    <Content Include="Assets\Style\app\extensions\_toastr.styl" />
+    <Content Include="Assets\Style\app\extensions\_durandal.styl" />
+    <Content Include="Assets\Style\app\extensions\all.styl" />
+    <Content Include="Assets\Style\app\pages\_clientes.styl" />
+    <Content Include="Assets\Style\app\pages\all.styl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,8 +266,26 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Assets\Style\app\mixins\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TechmindsCRM.Commom\TechmindsCRM.Commom.csproj">
+      <Project>{D4296DF6-0DD5-45D7-9B89-4A5851806C3F}</Project>
+      <Name>TechmindsCRM.Commom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechmindsCRM.Core\TechmindsCRM.Core.csproj">
+      <Project>{96AC4DD5-32C3-4150-BF2B-A45656761481}</Project>
+      <Name>TechmindsCRM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechmindsCRM.Data\TechmindsCRM.Data.csproj">
+      <Project>{48858CA4-1787-4C43-B79A-8F914C0B9F82}</Project>
+      <Name>TechmindsCRM.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechmindsCRM.IoC\TechmindsCRM.IoC.csproj">
+      <Project>{20D22721-16F1-4166-9ED8-D38B055BA1F9}</Project>
+      <Name>TechmindsCRM.IoC</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
