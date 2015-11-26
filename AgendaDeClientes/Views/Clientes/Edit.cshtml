@@ -1,7 +1,7 @@
 ﻿@model AgendaDeClientes.Models.Cliente
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit cliente";
     Layout = "~/Views/Shared/_LayoutAgendaOnline.cshtml";
 }
 
@@ -43,7 +43,7 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control input-lg" id="Telefone" name="Telefone" placeholder="Telefone" value="@Model.Telefone.ToString()" required>
+                                                            <input type="text" class="form-control input-lg" id="Telefone" name="Telefone" placeholder="Telefone" value="@Model.Telefone.ToString()" maxlength="15" required>
                                                         </div>
 
                                                         <div class="form-group">

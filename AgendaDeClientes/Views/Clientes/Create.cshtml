@@ -1,7 +1,7 @@
 ﻿@model AgendaDeClientes.Models.Cliente
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Novo cliente";
     Layout = "~/Views/Shared/_LayoutAgendaOnline.cshtml";
 }
 
@@ -40,14 +40,14 @@
                                                                     <input type="date" class="form-control input-lg" id="DataNascimento" name="DataNascimento" placeholder="Data de Nascimento" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <input type="text" class="form-control input-lg" id="Telefone" name="Telefone" placeholder="Telefone" required>
+                                                                    <input type="text" class="form-control input-lg" id="Telefone" name="Telefone" placeholder="Telefone" maxlength="15" required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <input type="text" class="form-control input-lg" id="Endereco" name="Endereco" placeholder="Endereço" required>
                                                                 </div>
-                                                        <div class="form-group">
-                                                                <input type="submit" value="Adicionar" class="btn btn-default" />
-                                                        </div>
+                                                                <div class="form-group">
+                                                                    <input type="submit" value="Adicionar" class="btn btn-default" />
+                                                                </div>
                                                     </form>
                                                 </div>
                                             </div>
