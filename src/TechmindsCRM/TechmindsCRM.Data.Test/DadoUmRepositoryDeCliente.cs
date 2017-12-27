@@ -93,5 +93,14 @@ namespace TechmindsCRM.Data.Test
             Enumerable.Range(1, 10).ToList().ForEach(i => _sut.Include(new Cliente { Nome = $"Cliente {i}" }));
             Assert.AreEqual(2, _sut.Filter("1").Count());
         }
+
+
+        [Test]
+        public void TesteNinJect()
+        {
+
+        }
+
+
     }
 }

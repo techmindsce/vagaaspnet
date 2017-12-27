@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BO\ClienteBO.cs" />
+    <Compile Include="BO\Teste.cs" />
     <Compile Include="Interfaces\IClienteBO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

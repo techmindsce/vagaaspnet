@@ -3,6 +3,8 @@ using Ninject.Extensions.Conventions;
 using Ninject.Modules;
 using Ninject.Web.Common;
 using TechmindsCRM.Commom.Interfaces;
+using TechmindsCRM.Core.BO;
+using TechmindsCRM.Core.Interfaces;
 using TechmindsCRM.Core.Models;
 using TechmindsCRM.Data;
 
@@ -16,6 +18,7 @@ namespace TechmindsCRM.IoC.WebModules
                             .SelectAllClasses()
                             .BindDefaultInterfaces()
                             .Configure(ctx => ctx.InRequestScope()));
+            Kernel.Bind<IClienteBO>().To<Teste>();
         }
     }
 }

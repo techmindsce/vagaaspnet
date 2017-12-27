@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 using AutoMapper;
 using TechmindsCRM.Commom.Exceptions;
+using TechmindsCRM.Core.BO;
 using TechmindsCRM.Core.Interfaces;
 using TechmindsCRM.Core.Models;
 using TechmindsCRM.Web.OutputModel;
@@ -15,10 +17,15 @@ namespace TechmindsCRM.Web.Controllers.api
     public class ClienteController : ApiController
     {
         private readonly IClienteBO clientesBO;
+        private readonly IEnumerable<IClienteBO> teste;
 
-        public ClienteController(IClienteBO clientesBO)
+        public ClienteController(IEnumerable<IClienteBO> teste)
         {
             this.clientesBO = clientesBO;
+            this.teste = teste;
+            var x = teste.FirstOrDefault(p => p.GetType().IsAssignableFrom(typeof(Teste)));
+            var y = teste.FirstOrDefault(p => p.GetType().IsAssignableFrom(typeof(ClienteBO)));
+            this.clientesBO = y;
         }
 
         [Route("api/cliente")]

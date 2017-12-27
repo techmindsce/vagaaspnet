@@ -22,7 +22,6 @@ label >span.help-hint {
   border-left: 3px solid;
 }
 .loading {
-  display: inline;
   font-size: 2.4rem;
   color: #8d8d8d;
 }
