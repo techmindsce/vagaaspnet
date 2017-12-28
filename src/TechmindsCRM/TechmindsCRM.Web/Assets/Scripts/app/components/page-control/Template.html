@@ -1,0 +1,11 @@
+﻿<div class="dataTables_paginate paging_simple_numbers" data-bind="visible: totalPages()>1">
+    <ul class="pagination">
+        <li data-bind="css:{'disabled':!prevPageEnable()}"><a aria-label="Previous" data-bind="click:prev"><span aria-hidden="true">&laquo;</span></a></li>
+        <!--<li data-bind="css:{'disabled':!nextPageEnable()},visible: ellipisisPrev"><span>...</span></li>-->
+        <!--ko foreach: pages-->
+        <li data-bind="css:{'active': $data.current}"><a data-bind="text:$data.value, click: $parent.goTo.bind($parent,$data.value)"> <span class="sr-only"></span></a></li>
+        <!--/ko-->
+        <li data-bind="css:{'disabled':!nextPageEnable()},visible: ellipisisNext"><span>...</span></li>
+        <li data-bind="css:{'disabled':!nextPageEnable()}"><a aria-label="Next" data-bind="click:next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</div>

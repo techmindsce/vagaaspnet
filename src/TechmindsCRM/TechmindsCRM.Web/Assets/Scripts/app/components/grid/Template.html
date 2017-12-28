@@ -1,0 +1,36 @@
+﻿<div class="box">
+    <div class="box-body">
+        <div class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row">
+                <div class="col-sm-12">
+                    <table role="grid" class="table table-bordered table-hover dataTable">
+                        <thead>
+                            <tr>
+                                <!--ko if: isMultiSelect-->
+                                <td class="col-sm-1 text-center"><input type="checkbox" data-bind="checked: checkAll" /></td>
+                                <!--/ko-->
+                                <!--ko foreach: collumns-->
+                                <th data-bind="text:title"></th>
+                                <!--/ko-->
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: dataSource().dataSet">
+                            <tr role="row" class="odd" data-bind="doubleClick: $parent.defaultAction.bind($parent)" title="De dois cliques na linha para editar item.">
+                                <!--ko if: $parent.isMultiSelect-->
+                                <td class="col-sm-1 text-center"><input type="checkbox" data-bind="value:$data.id, checked:$parent.selectedRows" /></td>
+                                <!--/ko-->
+                                <!--ko foreach: $parent.collumns-->
+                                <td data-bind="text: $parent[$data.prop], formatter: $data.format"></td>
+                                <!--/ko-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-7"><page-control class="right" params="{totalPages: totalPages, currentPage: currentPage, onGoTo: goToPage.bind($data), onNext: next.bind($data), onPrev:prev.bind($data)}"></page-control></div>
+            </div>
+        </div>
+    </div>
+</div>

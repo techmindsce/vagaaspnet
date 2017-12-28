@@ -1,0 +1,63 @@
+﻿<div class="wrapper">
+    <!-- Main Header -->
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo tech-logo">
+            <span class="logo-mini"><i class="fa" data-bind="css:{'fa-spinner fa-pulse':router.isNavigating}" style="font-size: 2.9rem; margin-top: 10px;"></i><b>TM</b>C</span>
+            <span class="logo-lg" style="display: inline-block">Techminds CRM</span>
+        </a>
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- search form (Optional) -->
+            <form action="#" method="get" class="sidebar-form" role="search" data-bind="submit:search">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+            <!-- /.search form -->
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">MENU</li>
+                <!--ko foreach:router.navigationModel -->
+                <li data-bind="css: { active: isActive }">
+                    <a data-bind="attr: { href: hash }"><i class="fa" data-bind="css:classIcon"></i> <span data-bind="text: title"></span></a>
+                </li>
+                <!--/ko  -->
+            </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <div class="content-wrapper">
+
+        <section class="content-header">
+            <h1 data-bind="text:router.activeInstruction().config.title"></h1>
+            <i class="fa fa-spinner fa-pulse loading" data-bind="visible: router.isNavigating"></i>
+            <!--TODO: BREADCUMB-->
+        </section>
+        <!-- Main content -->
+        <div class="content" data-bind="router: { transition:'entrance' }"></div><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Techminds CRM
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2015 <a href="#">Joel Ramos Michaliszen Jr. - Techminds CRM</a></strong> All rights reserved.
+    </footer>
+    <div class="control-sidebar-bg"></div>
+</div><!-- ./wrapper -->
